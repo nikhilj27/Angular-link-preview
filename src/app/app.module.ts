@@ -13,7 +13,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 @NgModule({
   declarations: [AppComponent, DetailComponent, ProductListComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgxLinkPreviewModule,
     BrowserAnimationsModule,
