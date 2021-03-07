@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Angular-Link-Preview"
+  "defaultProject": "Angular-Link-Preview",
+  "cli": {
+    "analytics": "857e8db4-1afc-4060-b56e-dd830782b9af"
+  }
 }

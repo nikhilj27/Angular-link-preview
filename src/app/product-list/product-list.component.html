@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 mt-3" *ngFor="let product of products" [routerLink]="['detail', product.id]">
+      <div class="card">
+        <img class="card-img-top" [src]="product?.image" [alt]="product?.title">
+        <div class="card-body">
+          <h5 class="card-title">{{product?.title| slice:0:20}}...</h5>
+          <p class="card-text">{{product?.description | slice:0:50}}...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
