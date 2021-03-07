@@ -34,8 +34,18 @@ export class DetailComponent implements OnInit, OnDestroy {
         this.titleService.setTitle(this.productDetail.title);
         this.metaService.addTags([
           {name: 'keywords', content: `${this.productDetail.category}, ${this.productDetail.title}`},
+          {name: 'title', content: `${this.productDetail.title}`},
           {name: 'description', content: this.productDetail.description},
-          {name: 'robots', content: 'index, follow'}
+          {name: 'image', content: `${this.productDetail.image}`},
+          {name: 'url', content: window.location.href},
+          {name: 'type', content: 'website'},
+          {name: 'robots', content: 'index, follow'},
+          {name: 'og:description', content: this.productDetail.description},
+          {name: 'og:keywords', content: `${this.productDetail.category}, ${this.productDetail.title}`},
+          {name: 'og:title', content: `${this.productDetail.title}`},
+          {name: 'og:url', content: window.location.href},
+          {name: 'og:type', content: 'website'},
+          {name: 'og:image', content: this.productDetail.image}
         ]);
         console.log(response);
       }
